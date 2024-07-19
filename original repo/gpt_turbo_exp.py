@@ -68,8 +68,8 @@ if __name__ == '__main__':
     em_list2 = []
     f1_list2 = []
     if dataset_type == 'musique':
-        base_url = 'datasets/mrc/'
-        musique_url = base_url + 'musique/'
+        base_url = 'F:/public datas/NLP/multi_QA'
+        musique_url = base_url + '/musique_data_v1.0/data/'
         musique_dev_data = open(musique_url + 'musique_ans_v1.0_dev.jsonl').readlines()
         musique_dev_data = [json.loads(item) for item in musique_dev_data]
         musique_pred_data = json.load(open('pred_retr793_musique.json'))

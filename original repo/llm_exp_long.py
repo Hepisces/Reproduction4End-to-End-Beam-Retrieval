@@ -46,10 +46,10 @@ llm_type = 'open_source' # open_source or openai
 examples_num = 3 # few-shots
 output_file_path = f"example_{dataset_type}_{llm_type}.jsonl"
 output_file = open(output_file_path, 'w')
-
-with open(f'prompts/few-shots_{dataset_type}.txt') as f:
+path="F:/GITHUB/Reproduction4End-to-End-Beam-Retrieval/original repo/"
+with open(f'{path}prompts/few-shots_{dataset_type}.txt') as f:
     prompt_template_few = f.read().rstrip("\n")
-with open(f'prompts/few-shots_{dataset_type}_br.txt') as f:
+with open(f'{path}prompts/few-shots_{dataset_type}_br.txt') as f:
     prompt_template_few_br = f.read().rstrip("\n")     
 
 if dataset_type == 'hotpot':

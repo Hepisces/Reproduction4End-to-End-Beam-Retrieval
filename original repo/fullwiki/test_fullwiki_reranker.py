@@ -20,7 +20,7 @@ def load_saved(model, path, exact=True):
 
 
 ckpt_url = ''
-model_path = 'models/deberta-v3-large'
+model_path = 'MoritzLaurer/deberta-v3-large-zeroshot-v2.0'
 device = torch.device("cuda", 4)
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 config = AutoConfig.from_pretrained(model_path)

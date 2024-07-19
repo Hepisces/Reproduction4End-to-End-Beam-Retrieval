@@ -9,9 +9,9 @@ model/deberta-v3-base \
 --tokenizer_path \
 model/deberta-v3-base \
 --train_file \
-F:/public datas/NLP/multi_QA/data_ids_april7/train.json \
+datasets/mrc/2wikimultihop/data/train.json \
 --predict_file \
-F:/public datas/NLP/multi_QA/data_ids_april7/dev.json \
+datasets/mrc/2wikimultihop/data/dev.json \
 --train_batch_size \
 8 \
 --learning_rate \
