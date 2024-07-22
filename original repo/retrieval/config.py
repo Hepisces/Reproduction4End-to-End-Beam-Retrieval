@@ -10,13 +10,13 @@ def common_args():
                         help="local_rank for distributed training on gpus")
 
     # model
-    parser.add_argument("--model_name", default="model/deberta-v3-base", type=str)
+    parser.add_argument("--model_name", default="MoritzLaurer/deberta-v3-large-zeroshot-v2.0", type=str)
     parser.add_argument("--beam_size", default=1, type=int)
     parser.add_argument("--use_flash_attention", action='store_true')
     parser.add_argument("--flash_attention_type", default='None', type=str)
     parser.add_argument("--dataset_type", default='hotpot', type=str)
     parser.add_argument("--mean_passage_len", default=70, type=int)
-    parser.add_argument("--tokenizer_path", type=str, default='model/deberta-v3-base')
+    parser.add_argument("--tokenizer_path", type=str, default='MoritzLaurer/deberta-v3-large-zeroshot-v2.0')
     parser.add_argument("--init_checkpoint", type=str,
                         help="Initial checkpoint (usually from a pre-trained BERT model).",
                         default="")
@@ -29,9 +29,9 @@ def common_args():
 
     # file
     parser.add_argument("--train_file", type=str,
-                        default="data/datasets/mrc/hotpotqa/hotpot_train_v1.1.json")
+                        default="F:\\public datas\\NLP\\multi_QA\\hotpot\\hotpot_train_v1.1.json")
     parser.add_argument("--predict_file", type=str,
-                        default="data/datasets/mrc/hotpotqa/hotpot_dev_distractor_v1.json")
+                        default="F:\\public datas\\NLP\\multi_QA\\hotpot\\hotpot_dev_distractor_v1.json")
     parser.add_argument("--num_workers", default=4, type=int)
     parser.add_argument("--do_train", default=False,
                         action='store_true', help="Whether to run training.")

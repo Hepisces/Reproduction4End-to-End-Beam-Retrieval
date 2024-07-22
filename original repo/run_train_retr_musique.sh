@@ -5,15 +5,15 @@ python train_beam_retriever.py \
 --prefix \
 deberta_use_two_classier_musique_beam_size2 \
 --model_name \
-model/deberta-v3-base \
+MoritzLaurer/deberta-v3-large-zeroshot-v2.0 \
 --tokenizer_path \
-model/deberta-v3-base \
+MoritzLaurer/deberta-v3-large-zeroshot-v2.0 \
 --dataset_type \
 musique \
 --train_file \
-datasets/mrc/musique/musique_ans_v1.0_train.jsonl \
+& "F:\\public datas\\NLP\\multi_QA\\musique_data_v1.0\\data\\musique_ans_v1.0_train.jsonl" \
 --predict_file \
-datasets/mrc/musique/musique_ans_v1.0_dev.jsonl \
+& "F:\\public datas\\NLP\\multi_QA\\musique_data_v1.0\\data\\musique_ans_v1.0_dev.jsonl" \
 --train_batch_size \
 8 \
 --learning_rate \

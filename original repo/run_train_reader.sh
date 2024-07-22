@@ -10,9 +10,9 @@ model/deberta-v3-large-squad2 \
 --dataset_type \
 musique \
 --train_file \
-datasets/mrc/musique/musique_ans_v1.0_train.jsonl \
+& "F:\\public datas\\NLP\\multi_QA\\musique_data_v1.0\\data\\musique_ans_v1.0_train.jsonl" \
 --predict_file \
-datasets/mrc/musique/musique_ans_v1.0_dev.jsonl \
+& "F:\\public datas\\NLP\\multi_QA\\musique_data_v1.0\\data\\musique_ans_v1.0_dev.jsonl" \
 --train_batch_size \
 8 \
 --learning_rate \

@@ -11,9 +11,9 @@ model/deberta-v3-large \
 --dataset_type \
 hotpot \
 --train_file \
-datasets/mrc/hotpotqa/hotpot_train_v1.1.json \
+& "F:\\public datas\\NLP\\multi_QA\hotpot\\hotpot_train_v1.1.json" \
 --predict_file \
-datasets/mrc/hotpotqa/hotpot_dev_distractor_v1.json \
+& "F:\\public datas\\NLP\\multi_QA\hotpot\\hotpot_dev_distractor_v1.json" \
 --train_batch_size \
 8 \
 --learning_rate \
