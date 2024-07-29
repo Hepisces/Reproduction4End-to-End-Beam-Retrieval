@@ -18,9 +18,9 @@ import numpy as np
 
 def load_saved(model, path, exact=True):
     try:
-        state_dict = torch.load(path)
+        state_dict = torch.load(path,weights_only=True)
     except:
-        state_dict = torch.load(path, map_location=torch.device('cpu'))
+        state_dict = torch.load(path, map_location=torch.device('cuda'),weights_only=True)
 
     def filter(x):
         return x[7:] if x.startswith('module.') else x

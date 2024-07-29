@@ -26,8 +26,8 @@ def main():
     if args.fp16:
         # import apex
         # apex.amp.register_half_function(torch, 'einsum')
-        from torch.cuda.amp import autocast, GradScaler
-        scaler = GradScaler()
+        from torch.amp import autocast, GradScaler
+        scaler = GradScaler("cuda")
     date_curr = date.today().strftime("%m-%d-%Y")
     model_name = f"{args.prefix}-seed{args.seed}-bsz{args.train_batch_size}-fp16{args.fp16}-lr{args.learning_rate}-decay{args.weight_decay}-warm{args.warmup_ratio}-valbsz{args.predict_batch_size}"
     args.output_dir = os.path.join(args.output_dir, date_curr, model_name)
@@ -168,7 +168,7 @@ def main():
                 id = batch.pop('id')
                 batch = move_to_cuda(batch)
                 if args.fp16:
-                    with autocast():
+                    with autocast("cuda"):
                         loss = model(**batch)['loss']
                 else:
                     loss = model(**batch)['loss']
