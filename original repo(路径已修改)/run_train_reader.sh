@@ -1,5 +1,5 @@
 CUDA_VISIBLE_DEVICES=0,1 \
-python train_reader.py \
+python original repo(路径已修改)\train_reader.py \
 --do_train \
 --prefix \
 musique_reader_deberta_large \

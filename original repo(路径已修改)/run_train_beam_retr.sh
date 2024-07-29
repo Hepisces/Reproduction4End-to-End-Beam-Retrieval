@@ -1,26 +1,26 @@
 CUDA_VISIBLE_DEVICES=2 \
-python train_beam_retriever.py \
+python original repo(路径已修改)\train_beam_retriever.py \
 --do_train \
 --gradient_checkpointing \
 --prefix \
-retr_hotpot_fullwiki_v2_50_beam_size1_base \
+retr_hotpot_beam_size2_large \
 --model_name \
-models/deberta-v3-base \
+model/deberta-v3-large \
 --tokenizer_path \
-models/deberta-v3-base \
+model/deberta-v3-large \
 --dataset_type \
-hotpot_reranker \
+hotpot \
 --train_file \
-data/hotpotqa/hotpotqa_fullwiki_br_train_v2_50.json \
+& "F:\\public datas\\NLP\\multi_QA\hotpot\\hotpot_train_v1.1.json" \
 --predict_file \
-data/hotpotqa/hotpotqa_fullwiki_br_dev_v2_50.json \
+& "F:\\public datas\\NLP\\multi_QA\hotpot\\hotpot_dev_distractor_v1.json" \
 --train_batch_size \
 8 \
 --learning_rate \
 2e-5 \
 --fp16 \
 --beam_size \
-1 \
+2 \
 --predict_batch_size \
 1 \
 --warmup-ratio \

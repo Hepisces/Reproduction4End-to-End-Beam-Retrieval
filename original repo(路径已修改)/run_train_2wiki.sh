@@ -1,5 +1,5 @@
 CUDA_VISIBLE_DEVICES=2 \
-python train_beam_retriever.py \
+python original repo(路径已修改)\train_beam_retriever.py \
 --do_train \
 --gradient_checkpointing \
 --prefix \
@@ -9,9 +9,9 @@ MoritzLaurer/deberta-v3-large-zeroshot-v2.0 \
 --tokenizer_path \
 MoritzLaurer/deberta-v3-large-zeroshot-v2.0 \
 --train_file \
-datasets/mrc/2wikimultihop/data/train.json \
+& "F:/public datas/NLP/multi_QA/data_ids_april7/train.json" \
 --predict_file \
-datasets/mrc/2wikimultihop/data/dev.json \
+& "F:/public datas/NLP/multi_QA/data_ids_april7/dev.json" \
 --train_batch_size \
 8 \
 --learning_rate \

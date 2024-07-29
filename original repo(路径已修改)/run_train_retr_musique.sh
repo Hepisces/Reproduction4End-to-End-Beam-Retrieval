@@ -1,5 +1,5 @@
 CUDA_VISIBLE_DEVICES=1 \
-python train_beam_retriever.py \
+python original repo(路径已修改)\train_beam_retriever.py \
 --do_train \
 --gradient_checkpointing \
 --prefix \
